@@ -12,7 +12,7 @@ export const about = {
     with React.js at the front-end and Node.js or Django at the backend,
     connecting with databases and other APIs.
     I'm constantly seeking new challenges and opportunities to grow,
-    and I continue learn and expand my skills.`,
+    and continue to learn and expand my skills.`,
 
     me_2: `As a former Operations Manager with almost a decade of experience,
     I faced a wide variety of challenges while planning, organizing and 
