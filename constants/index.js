@@ -70,10 +70,7 @@ export const skills = [
         icon: material_ui,
         name: "Material UI"
     },
-      {
-        icon: material_ui,
-        name: "Daniel"
-    },
+     
 
 ]
 
