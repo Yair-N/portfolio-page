@@ -1,7 +1,4 @@
-import {
-    javascript, css, react, bootstrap, django, flask, node,
-    material_ui, tailwind, html, redux,
-} from '@/public/assets/skills'
+
 
 
 export const about = {
@@ -27,50 +24,50 @@ export const about = {
 
 export const skills = [
     {
-        icon: react,
+        image: 'react',
         name: "React.js"
     },
     {
-        icon: redux,
+        image: 'redux',
         name: "Redux.js"
     },
     {
-        icon: node,
+        image: 'node',
         name: "Node.js"
     },
     {
-        icon: django,
+        image: 'django',
         name: "Django"
     },
     {
-        icon: flask,
+        image: 'flask',
         name: "Flask"
     },
     {
-        icon: javascript,
+        image: 'javascript',
         name: "JavaScript"
     },
     {
-        icon: html,
+        image: 'html',
         name: "HTML"
     },
     {
-        icon: css,
+        image: 'css',
         name: "CSS"
     },
     {
-        icon: bootstrap,
+        image: 'bootstrap',
         name: "Bootstrap"
     },
     {
-        icon: tailwind,
+        image: 'tailwind',
         name: "Tailwind"
     },
     {
-        icon: material_ui,
+        image: 'material_ui',
         name: "Material UI"
     },
-     
+
 
 ]
 

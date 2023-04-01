@@ -4,7 +4,7 @@ import { about } from '../constants'
 
 const Hero = () => {
     return (
-        <div className='w-full h-screen text-center'>
+        <div className='md:mt-0 mt-6  w-full h-screen text-center'>
             <div className="max-w-7xl mx-auto w-full h-full p-2 flex justify-center items-center">
 
                 <div>

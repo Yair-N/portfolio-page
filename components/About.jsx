@@ -5,7 +5,7 @@ import { about } from '@/constants'
 
 const About = () => {
     return (
-        <div id='about' className='w-full h-screen p-2 flex items-center pb-40'>
+        <div id='about' className='md:mt-0 mt-6 w-full h-screen p-2 flex items-center pb-40'>
             <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
                 <div className='col-span-2'>
                     <p className='uppercase text-xl tracking-widest text-[#5651e5]'>
