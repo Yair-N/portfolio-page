@@ -1,3 +1,14 @@
+import react from '../public/assets/skills/react.png'
+import redux from '../public/assets/skills/redux.png'
+import node from '../public/assets/skills/node.png'
+import django from '../public/assets/skills/django.png'
+import flask from '../public/assets/skills/flask.png'
+import javascript from '../public/assets/skills/javascript.png'
+import html from '../public/assets/skills/html.png'
+import bootstrap from '../public/assets/skills/bootstrap.png'
+import css from '../public/assets/skills/css.png'
+import tailwind from '../public/assets/skills/tailwind.png'
+import material_ui from '../public/assets/skills/material_ui.png'
 
 
 
@@ -24,47 +35,47 @@ export const about = {
 
 export const skills = [
     {
-        image: 'react',
+        image: react,
         name: "React.js"
     },
     {
-        image: 'redux',
+        image: redux,
         name: "Redux.js"
     },
     {
-        image: 'node',
+        image: node,
         name: "Node.js"
     },
     {
-        image: 'django',
+        image: django,
         name: "Django"
     },
     {
-        image: 'flask',
+        image: flask,
         name: "Flask"
     },
     {
-        image: 'javascript',
+        image: javascript,
         name: "JavaScript"
     },
     {
-        image: 'html',
+        image: html,
         name: "HTML"
     },
     {
-        image: 'css',
+        image: css,
         name: "CSS"
     },
     {
-        image: 'bootstrap',
+        image: bootstrap,
         name: "Bootstrap"
     },
     {
-        image: 'tailwind',
+        image: tailwind,
         name: "Tailwind"
     },
     {
-        image: 'material_ui',
+        image: material_ui,
         name: "Material UI"
     },
 

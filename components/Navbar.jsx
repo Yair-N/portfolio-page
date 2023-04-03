@@ -66,7 +66,7 @@ const Navbar = ({ theme, setShowResume, setDark }) => {
                     >
                         {theme ? <MdLightMode size={25} /> : <MdDarkMode size={25} />}
                     </div>
-                    <ul className={`hidden md:flex `}>
+                    <ul className={`hidden md:flex`}>
                         {navLinks.map((link) => (
                             <li key={`nav_link_${link.label}`} className={`navbarLink`}>
                                 <Link href={link.url} scroll={false}>{link.label}</Link>
