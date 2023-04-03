@@ -71,3 +71,25 @@ export const skills = [
 
 ]
 
+export const navLinks = [
+    {
+        url: '/#hero',
+        label: "Home"
+    },
+    {
+        url: '/#skills',
+        label: "Skills"
+    },
+    {
+        url: '/#projects',
+        label: "Projects"
+    },
+    {
+        url: '/#about',
+        label: "About"
+    },
+    {
+        url: '/#contact',
+        label: "Contact"
+    },
+]

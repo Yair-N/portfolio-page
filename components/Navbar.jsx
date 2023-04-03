@@ -1,23 +1,32 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { MdLightMode, MdDarkMode } from 'react-icons/md'
+
+import { navLinks } from '@/constants';
+import styles, { layout } from '@/styles/style';
 import NavLogo from '../public/assets/YNFS 600.png'
 
-const Navbar = ({ setShowResume }) => {
+const Navbar = ({ theme, setShowResume, setDark }) => {
 
     const [nav, setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
-    const [navBg, setNavBg] = useState('#ecf0f3');
     const [linkColor, setLinkColor] = useState('#1f2937');
 
+    const router = useRouter();
 
     const handleNav = () => {
-        setNav(!nav);
+        setNav((prev) => !prev);
     };
+
+    const handleTheme = () => {
+        setDark((prev)=>!prev)
+    }
 
     useEffect(() => {
         const handleShadow = () => {
@@ -31,17 +40,14 @@ const Navbar = ({ setShowResume }) => {
     }, []);
 
     const resume = (e) => {
-        console.log('opening resume')
         setShowResume(true)
     }
+
+
     return (
         <div
-            style={{ backgroundColor: `${navBg}` }}
-            className={
-                shadow
-                    ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
-                    : 'fixed w-full h-20 z-[100]'
-            }
+
+            className={`fixed w-full h-20 ${theme ? styles.bg_dark : styles.bg_normal}  ${shadow ? 'shadow-md z-[100] ease-in-out duration-300' : ' z-[100]'}`}
         >
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
                 <Link href='/'>
@@ -53,25 +59,21 @@ const Navbar = ({ setShowResume }) => {
                         className='cursor-pointer'
                     />
                 </Link>
-                <div>
-                    <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
-                        <li className='ml-10 text-sm uppercase hover:border-b'>
-                            <Link href='/'>Home</Link>
-                        </li>
-                        <li className='ml-10 text-sm uppercase hover:border-b'>
-                            <Link href='/#about'>About</Link>
-                        </li>
-                        <li className='ml-10 text-sm uppercase hover:border-b'>
-                            <Link href='/#skills'>Skills</Link>
-                        </li>
-                        <li className='ml-10 text-sm uppercase hover:border-b'>
-                            <Link href='/#projects'>Projects</Link>
-                        </li>
-                        <li className='ml-10 text-sm uppercase hover:border-b'>
+                <div className='h-full flex'>
+                    <div
+                        onClick={handleTheme}
+                        className='navbarLink'
+                    >
+                        {theme ? <MdLightMode size={25} /> : <MdDarkMode size={25}/>}
+                    </div>
+                    <ul className={`hidden md:flex `}>
+                        {navLinks.map((link) => (
+                            <li key={`nav_link_${link.label}`} className={`navbarLink`}>
+                                <Link href={link.url} scroll={false}>{link.label}</Link>
+                            </li>
+                        ))}
+                        <li className={`navbarLink`}>
                             <Link href='/' onClick={() => resume()}>Resume</Link>
-                        </li>
-                        <li className='ml-10 text-sm uppercase hover:border-b'>
-                            <Link href='/#contact'>Contact</Link>
                         </li>
                     </ul>
                     {/* Hamburger Icon */}
@@ -82,6 +84,7 @@ const Navbar = ({ setShowResume }) => {
                     >
                         <AiOutlineMenu size={25} />
                     </div>
+
                 </div>
             </div>
 
@@ -125,34 +128,14 @@ const Navbar = ({ setShowResume }) => {
                     </div>
                     <div className='py-4 flex flex-col'>
                         <ul className='uppercase'>
+                            {navLinks.map((link) => <Link key={`sidebar_${link.label}`} href={link.url}>
+                                <li onClick={() => setNav(false)} className={`${layout.sidebar}`}>
+                                    {link.label}
+                                </li>
+                            </Link>)}
                             <Link href='/'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                                    Home
-                                </li>
-                            </Link>
-                            <Link href='/#about'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                                    About
-                                </li>
-                            </Link>
-                            <Link href='/#skills'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                                    Skills
-                                </li>
-                            </Link>
-                            <Link href='/#projects'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                                    Projects
-                                </li>
-                            </Link>
-                            <Link href='/'>
-                                <li onClick={() => { setNav(false); resume(); }} className='py-4 text-sm'>
+                                <li onClick={() => { setNav(false); resume(); }} className={`${layout.sidebar}`}>
                                     Resume
-                                </li>
-                            </Link>
-                            <Link href='/#contact'>
-                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
-                                    Contact
                                 </li>
                             </Link>
                         </ul>
@@ -162,7 +145,7 @@ const Navbar = ({ setShowResume }) => {
                             </p>
                             <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                                 <a
-                                    href='https://www.linkedin.com/in/clint-briley-50056920a/'
+                                    href='https://www.linkedin.com/in/yair-notkovich/'
                                     target='_blank'
                                     rel='noreferrer'
                                 >
@@ -171,7 +154,7 @@ const Navbar = ({ setShowResume }) => {
                                     </div>
                                 </a>
                                 <a
-                                    href='https://github.com/fireclint'
+                                    href='https://github.com/Yair-n'
                                     target='_blank'
                                     rel='noreferrer'
                                 >
@@ -181,15 +164,15 @@ const Navbar = ({ setShowResume }) => {
                                 </a>
                                 <Link href='/#contact'>
                                     <div
-                                        onClick={() => setNav(!nav)}
+                                        onClick={(prev) => setNav(!prev)}
                                         className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
                                     >
                                         <AiOutlineMail />
                                     </div>
                                 </Link>
-                                <Link href='/resume'>
+                                <Link href='/'>
                                     <div
-                                        onClick={() => setNav(!nav)}
+                                        onClick={(prev) => setNav(!prev)}
                                         className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'
                                     >
                                         <BsFillPersonLinesFill />

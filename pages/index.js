@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import dynamic from "next/dynamic";
 
 import { Navbar, Hero, Contact, Projects, Skills, About, Footer, PDFViewer } from '../components'
@@ -7,10 +7,37 @@ import { Navbar, Hero, Contact, Projects, Skills, About, Footer, PDFViewer } fro
 
 export default function Home() {
 
+  const normal = `text-gray-600 bg-[#ecf0f3]`
+  const black = `bg-gray-900 text-gray-300`
 
   const [showResume, setShowResume] = useState(false)
+  const [dark, setDark] = useState(true)
+  
+useEffect(() => {
+  if (sessionStorage.theme === 'dark' || (!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+    console.log('dark mode on')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+  
+}, [dark])
 
-
+  const body = () =>{
+    if(showResume){
+      return  <PDFViewer setShowResume={setShowResume} />
+    }
+    return (
+      <div className={`${dark ? black : normal}`}>
+          <Navbar setShowResume={setShowResume} theme={dark} setDark={setDark}/>
+          <Hero theme={dark} />
+          <About theme={dark} />
+          <Skills theme={dark} />
+          <Projects theme={dark} />
+          <Contact theme={dark} />
+        </div>
+    )
+  }
 
   return (
     <div className="w-full h-full">
@@ -20,15 +47,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </header>
-      {showResume ? <PDFViewer setShowResume={setShowResume}/> :
-        <>
-          <Navbar setShowResume={setShowResume} />
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-        </>}
+      {body()}
 
     </div>
   )

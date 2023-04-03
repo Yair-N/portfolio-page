@@ -13,6 +13,12 @@ const styles = {
 
     marginX: "sm:mx-16 mx-6",
     marginY: "sm:my-16 my-6",
+
+    text_dark: 'text-gray-300',
+    text_normal: 'text-gray-600',
+    bg_dark: 'bg-gray-900 shadow-gray-400',
+    bg_normal: 'bg-[#ecf0f3] shadow-gray-400',
+    navbarLink: `my-auto p-2 rounded-sm text-sm  uppercase  ml-10  hover:shadow-[#7b79c0] hover:shadow-sm hover:text-[#7b79c0] hover:ease-in-out duration-150`,
 };
 
 export const layout = {
@@ -23,6 +29,9 @@ export const layout = {
     sectionImg: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
 
     sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
+    sidebar: 'py-4 text-sm',
+
+
 };
 
 export default styles;
