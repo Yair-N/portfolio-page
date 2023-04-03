@@ -25,7 +25,7 @@ const Navbar = ({ theme, setShowResume, setDark }) => {
     };
 
     const handleTheme = () => {
-        setDark((prev)=>!prev)
+        setDark((prev) => !prev)
     }
 
     useEffect(() => {
@@ -47,7 +47,7 @@ const Navbar = ({ theme, setShowResume, setDark }) => {
     return (
         <div
 
-            className={`fixed w-full h-20 ${theme ? styles.bg_dark : styles.bg_normal}  ${shadow ? 'shadow-md z-[100] ease-in-out duration-300' : ' z-[100]'}`}
+            className={`fixed top-0 w-full h-20 text-gray-600 bg-[#ecf0f3] dark:bg-gray-900 dark:text-gray-300  ${shadow ? 'shadow-md shadow-gray-400 z-[100] ease-in-out duration-300' : ' z-[100] '}`}
         >
             <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
                 <Link href='/'>
@@ -64,7 +64,7 @@ const Navbar = ({ theme, setShowResume, setDark }) => {
                         onClick={handleTheme}
                         className='navbarLink'
                     >
-                        {theme ? <MdLightMode size={25} /> : <MdDarkMode size={25}/>}
+                        {theme ? <MdLightMode size={25} /> : <MdDarkMode size={25} />}
                     </div>
                     <ul className={`hidden md:flex `}>
                         {navLinks.map((link) => (
@@ -78,9 +78,8 @@ const Navbar = ({ theme, setShowResume, setDark }) => {
                     </ul>
                     {/* Hamburger Icon */}
                     <div
-                        style={{ color: `${linkColor}` }}
                         onClick={handleNav}
-                        className='md:hidden'
+                        className='md:hidden navbarLink'
                     >
                         <AiOutlineMenu size={25} />
                     </div>
@@ -92,14 +91,14 @@ const Navbar = ({ theme, setShowResume, setDark }) => {
             {/* Overlay */}
             <div
                 className={
-                    nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
+                    nav ? 'md:hidden fixed left-0 top-0 w-full h-screen backdrop-blur-lg ' : ''
                 }
             >
                 {/* Side Drawer Menu */}
                 <div
                     className={
                         nav
-                            ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+                            ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen  text-gray-600 bg-[#ecf0f3] dark:bg-gray-900 dark:text-gray-300  p-10 ease-in duration-500'
                             : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
                     }
                 >
@@ -113,6 +112,7 @@ const Navbar = ({ theme, setShowResume, setDark }) => {
                                     alt='/'
                                 />
                             </Link>
+
                             <div
                                 onClick={handleNav}
                                 className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'

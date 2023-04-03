@@ -77,6 +77,10 @@ export const navLinks = [
         label: "Home"
     },
     {
+        url: '/#about',
+        label: "About"
+    },
+    {
         url: '/#skills',
         label: "Skills"
     },
@@ -84,10 +88,7 @@ export const navLinks = [
         url: '/#projects',
         label: "Projects"
     },
-    {
-        url: '/#about',
-        label: "About"
-    },
+
     {
         url: '/#contact',
         label: "Contact"
