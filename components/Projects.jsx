@@ -6,6 +6,8 @@ import netflixImg from '../public/assets/projects/netflix.jpg'
 import twitchImg from '../public/assets/projects/twitch.jpg'
 import ProjectItem from './ProjectItem';
 
+import { projects } from '@/constants';
+
 const Projects = () => {
     return (
         <div id='projects' className='w-full h-screen '>
@@ -15,14 +17,14 @@ const Projects = () => {
                 </p>
                 <h2 className='py-4'>What I&apos;ve Built</h2>
                 <div className='grid md:grid-cols-2 gap-8'>
-                    <ProjectItem
-                        title='work in progress'
-                        backgroundImg={workinprog}
-                        projectUrl='/'
-                        tech='React JS'
-                        priority={true}
-                    />
-                  
+                    {projects.map((project) => <ProjectItem
+                        title={project.title}
+                        backgroundImg={project.backgroundImg}
+                        projectUrl={project.projectUrl}
+                        tech={project.tech}
+                    // priority={true}
+                    />)}
+
                 </div>
             </div>
         </div>

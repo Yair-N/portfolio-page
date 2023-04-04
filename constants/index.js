@@ -11,10 +11,12 @@ import tailwind from '../public/assets/skills/tailwind.png'
 import material_ui from '../public/assets/skills/material_ui.png'
 
 
+import workinprog from '../public/assets/projects/workinprogress.jpg'
+import portfolio from '../public/assets/projects/portfolio.png'
 
 export const about = {
-    hero: `I am a full stack web developer specializing in turning an idea in to a responsive, full-fledged
-    web application using latest technologies.`,
+    hero: `With a passion for turning ideas in to a responsive, full-fledged
+    web applications using latest technologies.`,
 
     me_1: `I specialize in building responsive applications
     with React.js at the front-end and Node.js or Django at the backend,
@@ -103,5 +105,23 @@ export const navLinks = [
     {
         url: '/#contact',
         label: "Contact"
+    },
+]
+
+
+
+export const projects = [
+    {
+        title: 'work in progress',
+        backgroundImg: workinprog,
+        projectUrl: '/',
+        tech: 'React JS',
+    },
+
+    {
+        title: 'Portfolio',
+        backgroundImg: portfolio,
+        projectUrl: '/',
+        tech: 'React JS',
     },
 ]
