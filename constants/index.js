@@ -15,7 +15,7 @@ import workinprog from '../public/assets/projects/workinprogress.jpg'
 import portfolio from '../public/assets/projects/portfolio.png'
 
 export const about = {
-    hero: `With a passion for turning ideas in to a responsive, full-fledged
+    hero: `With a passion for turning ideas in to responsive, full-fledged
     web applications using latest technologies.`,
 
     me_1: `I specialize in building responsive applications
