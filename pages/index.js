@@ -9,7 +9,7 @@ export default function Home() {
 
 
   const [showResume, setShowResume] = useState(false)
-  const [dark, setDark] = useState(true)
+  const [dark, setDark] = useState(false)
 
   useEffect(() => {
     let theme = sessionStorage.getItem('theme')
