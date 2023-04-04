@@ -13,11 +13,13 @@ export default function Home() {
 
   useEffect(() => {
     let theme = sessionStorage.getItem('theme')
-      if(theme !== 'undefined' && theme === 'light')
+    if (theme !== 'undefined' && theme === 'light') {
       document.documentElement.classList.remove('dark')
       setDark(false)
+    }
+
   }, [])
-  
+
 
   useEffect(() => {
     if (dark) {
