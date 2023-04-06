@@ -50,7 +50,7 @@ export default function Home() {
         <Head>
           <title>Yair Full-Stack </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel='icon' href='/public/favicon.ico' />
+          <link rel='icon' href='/favicon.ico' />
         </Head>
         <Navbar setShowResume={setShowResume} theme={dark} setDark={setDark} />
         <Hero />
