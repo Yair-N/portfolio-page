@@ -13,6 +13,7 @@ import material_ui from '../public/assets/skills/material_ui.png'
 
 import workinprog from '../public/assets/projects/workinprogress.jpg'
 import portfolio from '../public/assets/projects/portfolio.png'
+import library from '../public/assets/projects/library.png'
 
 export const about = {
     hero: `With a passion for turning ideas in to responsive, full-fledged
@@ -123,5 +124,11 @@ export const projects = [
         backgroundImg: portfolio,
         projectUrl: '/',
         tech: 'React JS',
+    },
+    {
+        title: 'Flask Library',
+        backgroundImg: library,
+        projectUrl: 'https://yairnotko.pythonanywhere.com/',
+        tech: 'Flask',
     },
 ]

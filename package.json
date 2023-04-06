@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "tree":"tree -d -I  'node_modules'"
   },
   "dependencies": {
     "eslint": "8.36.0",
