@@ -112,13 +112,7 @@ export const navLinks = [
 
 
 export const projects = [
-    {
-        title: 'work in progress',
-        backgroundImg: workinprog,
-        projectUrl: '/',
-        tech: 'React JS',
-    },
-
+    
     {
         title: 'Portfolio',
         backgroundImg: portfolio,
@@ -130,5 +124,11 @@ export const projects = [
         backgroundImg: library,
         projectUrl: 'https://yairnotko.pythonanywhere.com/',
         tech: 'Flask',
+    },
+    {
+        title: 'work in progress',
+        backgroundImg: workinprog,
+        projectUrl: '/',
+        tech: 'Node.js',
     },
 ]
