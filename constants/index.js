@@ -112,23 +112,45 @@ export const navLinks = [
 
 
 export const projects = [
-    
-    {
-        title: 'Portfolio',
-        backgroundImg: portfolio,
-        projectUrl: '/',
-        tech: 'React JS',
-    },
+
+
     {
         title: 'Flask Library',
         backgroundImg: library,
         projectUrl: 'https://yairnotko.pythonanywhere.com/',
         tech: 'Flask',
+        description: 'A Flask application simulating a digital library, fetches the best sellers list from `The New york Times` Api, Styled with Bootstrap',
+
     },
     {
         title: 'work in progress',
         backgroundImg: workinprog,
-        projectUrl: '/',
+        projectUrl: false,
         tech: 'Node.js',
+        description: '',
+
+    },
+    {
+        title: 'work in progress',
+        backgroundImg: workinprog,
+        projectUrl: false,
+        tech: 'Node.js',
+        description: '',
+
+    },
+    {
+        title: 'work in progress',
+        backgroundImg: workinprog,
+        projectUrl: false,
+        tech: 'Node.js',
+        description: '',
+
+    },
+    {
+        title: 'Portfolio',
+        backgroundImg: portfolio,
+        projectUrl: false,
+        tech: 'React JS',
+        description: 'This portfolio page is a Next.js app styled with tailwind and hosted on vercel',
     },
 ]

@@ -9,9 +9,9 @@ import ContactImg from '../public/assets/contact.jpg';
 
 const Contact = () => {
     return (
-        <div id='contact' className='w-full lg:h-screen'>
+        <div id='contact' className='w-full h-screen md:my-16 my-32'>
             <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
-                <p className='text-xl tracking-widest uppercase color-main '>
+                <p className='text-xl tracking-widest uppercase color-main md:mt-10 mt-6'>
                     Contact
                 </p>
                 <h2 className='py-4'>Get In Touch</h2>

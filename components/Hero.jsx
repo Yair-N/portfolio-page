@@ -8,7 +8,7 @@ const Hero = (props) => {
             <div className="max-w-7xl mx-auto w-full h-full p-2 flex justify-center items-center">
 
                 <div>
-                    <p className={`uppercase tracking-widest text-sm text-gray-600 dark:text-gray-500`}>
+                    <p className={`uppercase tracking-widest text-sm text-gray-600 dark:text-gray-500 `}>
                         Let&apos;s get it up and running
                     </p>
                     <h1 className={`py-4  text-gray-700 dark:text-gray-400`}>
