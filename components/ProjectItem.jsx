@@ -1,23 +1,12 @@
 import Image from 'next/image'
-import Link from 'next/link'
+// import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 
 const ProjectItem = ({ project }) => {
 
 
     const { title, backgroundImg, tech, description, projectUrl } = project
-    // const [moreInfo, setMoreInfo] = useState(false)
 
-    // useEffect(() => {
-    //     const handleDocumentClick = () => {
-    //         setMoreInfo(false)
-    //     }
-
-    //     // on mount listen to document click to close more info
-    //     document.addEventListener('click', handleDocumentClick)
-
-    //     return () => document.removeEventListener('click', handleDocumentClick)
-    // }, [])
 
     console.log(description)
     return (

@@ -9,11 +9,14 @@ import bootstrap from '../public/assets/skills/bootstrap.png'
 import css from '../public/assets/skills/css.png'
 import tailwind from '../public/assets/skills/tailwind.png'
 import material_ui from '../public/assets/skills/material_ui.png'
+import typescript from  '../public/assets/skills/ts-logo-128.png'
 
 
 import workinprog from '../public/assets/projects/workinprogress.jpg'
 import portfolio from '../public/assets/projects/portfolio.png'
 import library from '../public/assets/projects/library.png'
+import escgif from '../public/assets/projects/escgif.gif'
+
 
 export const about = {
     hero: `With a passion for turning ideas in to responsive, full-fledged
@@ -53,14 +56,19 @@ export const skills = [
         image: django,
         name: "Django"
     },
+     {
+        image: javascript,
+        name: "JavaScript"
+    },
+     {
+        image: typescript,
+        name: "TypeScript"
+    },
     {
         image: flask,
         name: "Flask"
     },
-    {
-        image: javascript,
-        name: "JavaScript"
-    },
+   
     {
         image: html,
         name: "HTML"
@@ -115,7 +123,15 @@ export const projects = [
 
 
     {
-        title: 'Flask Library',
+        title: 'Graduation project',
+        backgroundImg: escgif,
+        projectUrl: 'https://github.com/Yair-N/Graduation-project',
+        tech: 'React, Django, Redux, sql',
+        description: 'A Single page app for flight tickets inspiration and search',
+
+    },
+    {
+        title: 'Mid-term project',
         backgroundImg: library,
         projectUrl: 'https://yairnotko.pythonanywhere.com/',
         tech: 'Flask',
@@ -131,26 +147,10 @@ export const projects = [
 
     },
     {
-        title: 'work in progress',
-        backgroundImg: workinprog,
-        projectUrl: false,
-        tech: 'Node.js',
-        description: '',
-
-    },
-    {
-        title: 'work in progress',
-        backgroundImg: workinprog,
-        projectUrl: false,
-        tech: 'Node.js',
-        description: '',
-
-    },
-    {
         title: 'Portfolio',
         backgroundImg: portfolio,
         projectUrl: false,
         tech: 'React JS',
-        description: 'This portfolio page is a Next.js app styled with tailwind and hosted on vercel',
+        description: 'My portfolio page is a Next.js app styled with tailwind and hosted on vercel',
     },
 ]
