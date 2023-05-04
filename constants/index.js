@@ -9,13 +9,14 @@ import bootstrap from '../public/assets/skills/bootstrap.png'
 import css from '../public/assets/skills/css.png'
 import tailwind from '../public/assets/skills/tailwind.png'
 import material_ui from '../public/assets/skills/material_ui.png'
-import typescript from  '../public/assets/skills/ts-logo-128.png'
+import typescript from '../public/assets/skills/ts-logo-128.png'
 
 
 import workinprog from '../public/assets/projects/workinprogress.jpg'
 import portfolio from '../public/assets/projects/portfolio.png'
 import library from '../public/assets/projects/library.png'
 import escgif from '../public/assets/projects/escgif.gif'
+import spacex from '../public/assets/projects/spacexui.png'
 
 
 export const about = {
@@ -56,11 +57,11 @@ export const skills = [
         image: django,
         name: "Django"
     },
-     {
+    {
         image: javascript,
         name: "JavaScript"
     },
-     {
+    {
         image: typescript,
         name: "TypeScript"
     },
@@ -68,7 +69,7 @@ export const skills = [
         image: flask,
         name: "Flask"
     },
-   
+
     {
         image: html,
         name: "HTML"
@@ -139,11 +140,22 @@ export const projects = [
 
     },
     {
-        title: 'work in progress',
+        title: 'SpaceX Ui',
+        backgroundImg: spacex,
+        projectUrl: 'https://github.com/Yair-N/another-lesson-learned/tree/master/node/SpaceX-Project',
+        tech: 'Express, Mongo, React, Node.js,AWS, Ducker',
+        description: `The app was briefly deployed on a AWS EC2 instance. a web app that displays SpaceX’s 
+        historical and future launches providing summarized 
+        info on each launch. The data is sourced from r/SpaceX API using restful api
+        `,
+
+    },
+    {
+        title: 'Pulse systems',
         backgroundImg: workinprog,
         projectUrl: false,
-        tech: 'Node.js',
-        description: '',
+        tech: 'MERN',
+        description: "e-commerce app under construction 'Pulse systems'  is a business that provides  smart home, home theater and audiophile solutions including consulting and planning services as well as Top-tier products available for purchase online",
 
     },
     {
