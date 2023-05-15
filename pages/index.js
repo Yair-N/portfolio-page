@@ -67,7 +67,7 @@ export default function Home() {
     )
 
   return (
-    <div className="w-full text-gray-600 bg-[#ecf0f3] dark:bg-gray-900 dark:text-gray-300">
+    <div className="w-full overscroll-contain text-gray-600 bg-[#ecf0f3] dark:bg-gray-900 dark:text-gray-300">
 
       {body()}
 
