@@ -13,7 +13,7 @@ const PDFViewer = ({setShowResume}) => {
         pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
     }, [])
 
-    const path = `${window.location.protocol}//${window.location.host}//cv.pdf`
+    const path = `${window.location.protocol}//${window.location.host}//CV.pdf`
     return (
 
 
