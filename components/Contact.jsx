@@ -35,8 +35,20 @@ const Contact = () => {
                                 </p>
                             </div>
                             <div>
-                                <p className='uppercase pt-8'>Connect With Me</p>
+
                                 <div className='flex items-center justify-between py-4'>
+                                    <div>
+                                        <p className='uppercase py-2'>
+                                            Connect With Me
+
+                                        </p>
+                                        <a
+                                            href='mailto:ynotkovich@gmail.com'
+                                            target='_blank'
+                                            rel='noreferrer' className=''>
+                                            ynotkovich@gmail.com
+                                        </a>
+                                    </div>
                                     <a
                                         href='https://www.linkedin.com/in/yair-notkovich/'
                                         target='_blank'
@@ -55,15 +67,7 @@ const Contact = () => {
                                             <FaGithub />
                                         </div>
                                     </a>
-                                    <a
-                                        href='mailto:yair.notkovich@gmail.com'
-                                        target='_blank'
-                                        rel='noreferrer'
-                                    >
-                                        <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                                            <AiOutlineMail />
-                                        </div>
-                                    </a>
+
                                     {/* <Link href='/resume'>
 
                                         <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
