@@ -124,7 +124,7 @@ export const projects = [
 
 
     {
-        title: 'Graduation project',
+        title: 'Esc - How far do you want to go?',
         backgroundImg: escgif,
         projectUrl: 'https://github.com/Yair-N/Graduation-project',
         tech: 'React, Django, Redux, sql',
@@ -132,7 +132,7 @@ export const projects = [
 
     },
     {
-        title: 'Mid-term project',
+        title: 'Flask digital library',
         backgroundImg: library,
         projectUrl: 'https://yairnotko.pythonanywhere.com/',
         tech: 'Flask',
